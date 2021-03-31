@@ -1,0 +1,19 @@
+import openpyxl as op
+
+wb = op.load_workbook('realestatedata.xlsx')
+print(type(wb))
+
+sheets = wb.sheetnames
+print("listing of sheets ")
+for i in sheets:
+    print(i)
+
+sheet = wb['Rushi']
+
+print(type(sheet))
+
+print(sheet.title)
+
+data1 = sheet['A1']
+
+print(data1)
